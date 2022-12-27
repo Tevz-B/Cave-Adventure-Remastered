@@ -27,7 +27,12 @@ namespace StarterAssets
         {
             starterAssetsInputs.SprintInput(virtualSprintState);
         }
-        
+
+        public void VirtualPressInput(bool virtualPressState)
+        {
+            starterAssetsInputs.PressInput(virtualPressState);
+        }
+
     }
 
 }
