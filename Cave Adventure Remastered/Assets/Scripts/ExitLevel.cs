@@ -10,8 +10,8 @@ public class ExitLevel : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            //int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-           // SceneManager.LoadScene(currentSceneIndex + 1);
+            Debug.Log("Level Complete");
+            FindObjectOfType<GameSession>().NextLevel();
         }
 
     }
