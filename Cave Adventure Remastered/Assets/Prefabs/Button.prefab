@@ -112,8 +112,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myDoor: {fileID: 0}
   openTrigger: 1
-  closeTrigger: 0
-  textObject: {fileID: 0}
 --- !u!1 &7778323499146854186
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,7 +173,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1256501890879759206, guid: 02f3e14ec6d44bb4eb5ed6c4c884c260, type: 3}
+  - {fileID: 2100000, guid: 54e41f49bfacd5e4b964e478a1a77178, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -258,7 +256,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 8039567086963658369, guid: 02f3e14ec6d44bb4eb5ed6c4c884c260, type: 3}
+  - {fileID: 2100000, guid: 0b5605592643b3f4bb68c1466563552a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
