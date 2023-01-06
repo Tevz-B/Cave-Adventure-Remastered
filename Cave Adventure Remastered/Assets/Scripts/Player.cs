@@ -12,7 +12,11 @@ namespace StarterAssets
 	public class Player : MonoBehaviour
 	{
 		[Header("Player")]
-		[SerializeField] AudioClip runSound;
+		[Tooltip("Array of footstep sounds")]
+		[SerializeField] AudioClip[] footestepSounds;
+		[SerializeField] AudioClip jumpSound;
+		[SerializeField] AudioClip landSound;
+		public GameObject hand;
 		[Tooltip("Move speed of the character in m/s")]
 		public float MoveSpeed = 4.0f;
 		[Tooltip("Sprint speed of the character in m/s")]
@@ -60,6 +64,7 @@ namespace StarterAssets
 		private float _rotationVelocity;
 		private float _verticalVelocity;
 		private float _terminalVelocity = 53.0f;
+		private bool _groundedPrev;
 
 		// timeout deltatime
 		private float _jumpTimeoutDelta;
@@ -103,15 +108,20 @@ namespace StarterAssets
 			_controller = GetComponent<CharacterController>();
 			_input = GetComponent<StarterAssetsInputs>();
 			_audioSource = GetComponentInChildren<AudioSource>();
+			_audioSource.loop = false;
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 			_playerInput = GetComponent<PlayerInput>();
 #else
 			Debug.LogError( "Starter Assets package is missing dependencies. Please use Tools/Starter Assets/Reinstall Dependencies to fix it");
 #endif
 
-			// reset our timeouts on start
-			_jumpTimeoutDelta = JumpTimeout;
+		// reset our timeouts on start
+		_jumpTimeoutDelta = JumpTimeout;
 			_fallTimeoutDelta = FallTimeout;
+
+			// load audio data
+			landSound.LoadAudioData();
+			jumpSound.LoadAudioData();
 		}
 
 		private void Update()
@@ -128,20 +138,25 @@ namespace StarterAssets
 		}
 
 		private void PlaySounds()
-        {
-			if (_speed > 0.2 && Grounded)
+		{
+			if (Grounded && !_groundedPrev)
             {
-				if (!_audioSource.isPlaying)
-                {
-					//_audioSource.loop = true;
-					//_audioSource.PlayOneShot(runSound, 1);
+				_audioSource.clip = landSound;
+				_audioSource.Play();
+			}
+			else if (_speed > 0.1 && Grounded)
+			{
+				if (!_audioSource.isPlaying || _audioSource.clip == jumpSound)
+				{
+					int rand = Random.Range(0, footestepSounds.Length);
+					_audioSource.clip = footestepSounds[rand];
 					_audioSource.Play();
-                }
-            } else
-            {
-				_audioSource.Stop();
-            }
-        }
+				}
+			}
+
+			_groundedPrev = Grounded;
+			//Debug.Log(_groundedPrev);
+		}
 
 		private void GroundedCheck()
 		{
@@ -217,6 +232,13 @@ namespace StarterAssets
 
 			// move the player
 			_controller.Move(inputDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
+
+			// Hand
+
+			hand.transform.localEulerAngles = new Vector3( ClampAngle( _cinemachineTargetPitch * 0.8f, BottomClamp, 30), 0 ,0);
+			hand.transform.localPosition = new Vector3(0, 0, - _cinemachineTargetPitch / 45);
+			Debug.Log(_cinemachineTargetPitch);
+			//Debug.Log(hand.transform.rotation.);
 		}
 
 		private void JumpAndGravity()
@@ -237,6 +259,8 @@ namespace StarterAssets
 				{
 					// the square root of H * -2 * G = how much velocity needed to reach desired height
 					_verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
+					_audioSource.clip = jumpSound;
+					_audioSource.Play();
 				}
 
 				// jump timeout
