@@ -46,7 +46,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -569,7 +569,7 @@ GameObject:
   - component: {fileID: 6582150970691022814}
   m_Layer: 6
   m_Name: Hand
-  m_TagString: Untagged
+  m_TagString: Hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -661,7 +661,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55919ac34a26952479f3fc91f777b2fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSound: {fileID: 8300000, guid: 55e69fa2561aceb44b626baa3bcafb8c, type: 3}
+  footestepSounds:
+  - {fileID: 8300000, guid: c9b61b45122a16f488f93fed19597542, type: 3}
+  - {fileID: 8300000, guid: d475fc126ef70204797feafea20b5e62, type: 3}
+  - {fileID: 8300000, guid: 5865b7ae0bb4ccd41b60eec50666314e, type: 3}
+  - {fileID: 8300000, guid: 8275287f49e07b64ab5f6dc5a9397804, type: 3}
+  - {fileID: 8300000, guid: 10d099c45ad30684bac09c9e079c049c, type: 3}
+  - {fileID: 8300000, guid: 6c869169f412a8f4a8c61a7054cc3968, type: 3}
+  jumpSound: {fileID: 8300000, guid: 4b4417830efc51b40863d2936ebef8e6, type: 3}
+  landSound: {fileID: 8300000, guid: 63d573e991206814f9b665152cad36ac, type: 3}
+  hand: {fileID: 7913254776264284788}
   MoveSpeed: 5
   SprintSpeed: 8
   RotationSpeed: 1
