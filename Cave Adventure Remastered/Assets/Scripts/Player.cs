@@ -72,7 +72,7 @@ namespace StarterAssets
 
 		// audio
 		private AudioSource _audioSource;
-	
+
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 		private PlayerInput _playerInput;
 #endif
@@ -172,7 +172,7 @@ namespace StarterAssets
 			{
 				//Don't multiply mouse input by Time.deltaTime
 				float deltaTimeMultiplier = IsCurrentDeviceMouse ? 1.0f : Time.deltaTime;
-				
+
 				_cinemachineTargetPitch += _input.look.y * RotationSpeed * deltaTimeMultiplier;
 				_rotationVelocity = _input.look.x * RotationSpeed * deltaTimeMultiplier;
 
@@ -237,7 +237,7 @@ namespace StarterAssets
 
 			hand.transform.localEulerAngles = new Vector3( ClampAngle( _cinemachineTargetPitch * 0.8f, BottomClamp, 30), 0 ,0);
 			hand.transform.localPosition = new Vector3(0, 0, - _cinemachineTargetPitch / 45);
-			Debug.Log(_cinemachineTargetPitch);
+			//Debug.Log(_cinemachineTargetPitch);
 			//Debug.Log(hand.transform.rotation.);
 		}
 

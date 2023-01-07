@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CinemachineTarget
   - Hand
+  - FakeFlor
   layers:
   - Default
   - TransparentFX
