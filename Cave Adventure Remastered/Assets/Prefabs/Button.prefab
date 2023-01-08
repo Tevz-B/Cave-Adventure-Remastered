@@ -112,6 +112,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myDoor: {fileID: 0}
   openTrigger: 1
+  animationName: DoorOpen2
+  _audio: {fileID: 0}
+  animTime: 12
 --- !u!1 &7778323499146854186
 GameObject:
   m_ObjectHideFlags: 0

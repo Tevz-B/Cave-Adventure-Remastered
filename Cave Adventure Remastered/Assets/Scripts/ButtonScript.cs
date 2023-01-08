@@ -11,13 +11,14 @@ public class ButtonScript : MonoBehaviour
     [SerializeField] private Animator myDoor = null;
 
     [SerializeField] private bool openTrigger = false;
-    //[SerializeField] private bool closeTrigger = false;
+    [SerializeField] public string animationName = "DoorOpen";
+    [SerializeField] private AudioSource _audio = null;
+    [SerializeField] private float animTime = 1.0f;
 
     private StarterAssets.StarterAssetsInputs _input;
 
     private void Start()
     {
-
     }
 
     private void OnTriggerStay(Collider other)
@@ -27,9 +28,15 @@ public class ButtonScript : MonoBehaviour
         {
             if ( _input && _input.press)
             {
-                myDoor.Play("DoorOpen", 0, 0.0f);
+                myDoor.speed = 1.0f / animTime;
+                myDoor.Play(animationName, 0, 0.0f);
                 gameObject.SetActive(false);
                 FindObjectOfType<GameSession>().HideInteractText();
+
+                // Play audio
+                _audio.pitch = _audio.clip.length / animTime;
+                _audio.Play();
+
                 GameObject.Destroy(this);
             }
         }
