@@ -3021,6 +3021,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37e27bf56b9c23842a309f560bf6aa3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  respawnPoint: {x: 0, y: 0, z: 0}
 --- !u!64 &221697779
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3271,6 +3272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37e27bf56b9c23842a309f560bf6aa3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  respawnPoint: {x: 0, y: 0, z: 0}
 --- !u!65 &226702973
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7340,17 +7342,17 @@ PrefabInstance:
     - target: {fileID: 8997996947095583982, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -121.7
+      value: -75.97
       objectReference: {fileID: 0}
     - target: {fileID: 8997996947095583982, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -10.55
+      value: 24.27
       objectReference: {fileID: 0}
     - target: {fileID: 8997996947095583982, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 34.8
+      value: 72.77
       objectReference: {fileID: 0}
     - target: {fileID: 8997996947095583982, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
         type: 3}
@@ -10381,6 +10383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37e27bf56b9c23842a309f560bf6aa3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  respawnPoint: {x: 0, y: 0, z: 0}
 --- !u!4 &730992966 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2729697284316745448, guid: 7a158bfc9c0cfd14f85f38571c916d0a,
@@ -23068,17 +23071,17 @@ PrefabInstance:
     - target: {fileID: 8762286023885395322, guid: 9c489a8547f4d9e4387da15a4ff82c81,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -121.7
+      value: -75.97
       objectReference: {fileID: 0}
     - target: {fileID: 8762286023885395322, guid: 9c489a8547f4d9e4387da15a4ff82c81,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.175
+      value: 25.645
       objectReference: {fileID: 0}
     - target: {fileID: 8762286023885395322, guid: 9c489a8547f4d9e4387da15a4ff82c81,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 34.8
+      value: 72.77
       objectReference: {fileID: 0}
     - target: {fileID: 8762286023885395322, guid: 9c489a8547f4d9e4387da15a4ff82c81,
         type: 3}
@@ -28945,17 +28948,17 @@ PrefabInstance:
     - target: {fileID: 9005220659476430818, guid: 2d3a85ecde41a8246a79669975912b74,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -121.7
+      value: -75.97
       objectReference: {fileID: 0}
     - target: {fileID: 9005220659476430818, guid: 2d3a85ecde41a8246a79669975912b74,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.175
+      value: 25.645
       objectReference: {fileID: 0}
     - target: {fileID: 9005220659476430818, guid: 2d3a85ecde41a8246a79669975912b74,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 34.8
+      value: 72.77
       objectReference: {fileID: 0}
     - target: {fileID: 9005220659476430818, guid: 2d3a85ecde41a8246a79669975912b74,
         type: 3}
@@ -31551,7 +31554,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ff292642f497794dad2569a50f6b010, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 10
+  timer: 0
 --- !u!4 &3428149471203808035
 Transform:
   m_ObjectHideFlags: 0
@@ -32961,7 +32964,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ff292642f497794dad2569a50f6b010, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 10
+  timer: 0
 --- !u!1 &5564780527642076280
 GameObject:
   m_ObjectHideFlags: 0
@@ -33717,6 +33720,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6350376393325682792, guid: f70d671f815df44448c3bacaeea7bbf3,
+        type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 0.0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 6350376393325682792, guid: f70d671f815df44448c3bacaeea7bbf3,
+        type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 7.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7938788950367981503, guid: f70d671f815df44448c3bacaeea7bbf3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0007
+      objectReference: {fileID: 0}
+    - target: {fileID: 7938788950367981503, guid: f70d671f815df44448c3bacaeea7bbf3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0188
+      objectReference: {fileID: 0}
     - target: {fileID: 8357678245779990871, guid: f70d671f815df44448c3bacaeea7bbf3,
         type: 3}
       propertyPath: m_RootOrder
@@ -33776,6 +33799,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: braizer
+      objectReference: {fileID: 0}
+    - target: {fileID: 9126782955592925135, guid: f70d671f815df44448c3bacaeea7bbf3,
+        type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 0.0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 9126782955592925135, guid: f70d671f815df44448c3bacaeea7bbf3,
+        type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 7.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f70d671f815df44448c3bacaeea7bbf3, type: 3}
@@ -33940,6 +33973,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37e27bf56b9c23842a309f560bf6aa3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  respawnPoint: {x: 0, y: 0, z: 0}
 --- !u!65 &6665492100672984142
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34221,7 +34255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ff292642f497794dad2569a50f6b010, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 10
+  timer: 0
 --- !u!4 &7015956332690899149
 Transform:
   m_ObjectHideFlags: 0
@@ -35098,6 +35132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37e27bf56b9c23842a309f560bf6aa3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  respawnPoint: {x: 0, y: 0, z: 0}
 --- !u!65 &7587516558397456430
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36479,6 +36514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37e27bf56b9c23842a309f560bf6aa3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  respawnPoint: {x: 0, y: 0, z: 0}
 --- !u!23 &8846852690803743488
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -36613,7 +36649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ff292642f497794dad2569a50f6b010, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 10
+  timer: 0
 --- !u!1 &8899511648376438361
 GameObject:
   m_ObjectHideFlags: 0
@@ -36760,7 +36796,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ff292642f497794dad2569a50f6b010, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 10
+  timer: 0
 --- !u!1001 &8982078266199215135
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37042,7 +37078,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ff292642f497794dad2569a50f6b010, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 10
+  timer: 0
 --- !u!1 &9152108236716970165
 GameObject:
   m_ObjectHideFlags: 0
