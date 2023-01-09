@@ -9,7 +9,7 @@ public class DeathPlane : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            FindObjectOfType<GameSession>().ResetLevel();
+            FindObjectOfType<GameSession>().Death();
         }
     }
 }

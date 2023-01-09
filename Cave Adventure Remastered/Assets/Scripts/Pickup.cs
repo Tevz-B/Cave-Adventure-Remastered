@@ -14,21 +14,6 @@ public class Pickup : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            // increase counter
-            //StarterAssets.Player player;
-            //player = other.GetComponentInParent<StarterAssets.Player>();
-
-            //if (player)
-            //{
-            //    player.PickupCoin();
-            //    Debug.Log(player.Coins());
-            //    Destroy(gameObject);
-            //}
-            //FindObjectOfType<GameSession>().PickupCoin();
-            //GetComponent<AudioSource>().Play();
-            //GetComponent<MeshRenderer>().gameObject.SetActive(false);
-            //GetComponent<Collider>().gameObject.SetActive(false);
-            //Destroy(gameObject, 3);
 
             audioSource = Camera.main.GetComponent<AudioSource>();
 

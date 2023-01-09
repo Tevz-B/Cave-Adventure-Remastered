@@ -6263,17 +6263,17 @@ PrefabInstance:
     - target: {fileID: 8997996947095583982, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -75.97
+      value: -76.11
       objectReference: {fileID: 0}
     - target: {fileID: 8997996947095583982, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 24.27
+      value: 18.89
       objectReference: {fileID: 0}
     - target: {fileID: 8997996947095583982, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 72.77
+      value: 73.97
       objectReference: {fileID: 0}
     - target: {fileID: 8997996947095583982, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
         type: 3}
@@ -17425,6 +17425,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coins: 0
   startCoins: 0
+  currentLevelIndex: 1
   CoinsText: {fileID: 41491120}
   InteractText: {fileID: 271087564}
 --- !u!224 &1516598938
@@ -19610,17 +19611,17 @@ PrefabInstance:
     - target: {fileID: 8762286023885395322, guid: 9c489a8547f4d9e4387da15a4ff82c81,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -75.97
+      value: -76.11
       objectReference: {fileID: 0}
     - target: {fileID: 8762286023885395322, guid: 9c489a8547f4d9e4387da15a4ff82c81,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 25.645
+      value: 20.265
       objectReference: {fileID: 0}
     - target: {fileID: 8762286023885395322, guid: 9c489a8547f4d9e4387da15a4ff82c81,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 72.77
+      value: 73.97
       objectReference: {fileID: 0}
     - target: {fileID: 8762286023885395322, guid: 9c489a8547f4d9e4387da15a4ff82c81,
         type: 3}
@@ -24671,17 +24672,17 @@ PrefabInstance:
     - target: {fileID: 9005220659476430818, guid: 2d3a85ecde41a8246a79669975912b74,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -75.97
+      value: -76.11
       objectReference: {fileID: 0}
     - target: {fileID: 9005220659476430818, guid: 2d3a85ecde41a8246a79669975912b74,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 25.645
+      value: 20.265
       objectReference: {fileID: 0}
     - target: {fileID: 9005220659476430818, guid: 2d3a85ecde41a8246a79669975912b74,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 72.77
+      value: 73.97
       objectReference: {fileID: 0}
     - target: {fileID: 9005220659476430818, guid: 2d3a85ecde41a8246a79669975912b74,
         type: 3}
@@ -26287,6 +26288,8 @@ GameObject:
   - component: {fileID: 8213149008858076036}
   - component: {fileID: 3691473919237605991}
   - component: {fileID: 3077746338540099815}
+  - component: {fileID: 8213149008858076038}
+  - component: {fileID: 8213149008858076037}
   m_Layer: 0
   m_Name: Treasure
   m_TagString: Untagged
@@ -27047,7 +27050,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -4342424911767312120, guid: 52247846e0bb3434c9e6a7425bfc2ddc, type: 3}
+  - {fileID: 2100000, guid: 2825d21ddeaa6664791e70e657bd0965, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -31277,6 +31280,32 @@ Transform:
   m_Father: {fileID: 6611723986020934764}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &8213149008858076037
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811416738960742327}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.78114164
+  m_Height: 2.25443
+  m_Direction: 1
+  m_Center: {x: 0.0016030074, y: 0.12721455, z: -0.0009808542}
+--- !u!114 &8213149008858076038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811416738960742327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40958ccdcc8e7bf40b8372ce5b44d304, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &8231460721390845909
 Transform:
   m_ObjectHideFlags: 0

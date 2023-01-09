@@ -9,6 +9,7 @@ public class GameSession : MonoBehaviour
     public static GameSession Instance;
     public int coins = 0;
     public int startCoins = 0;
+    public int currentLevelIndex = 1;
 
     [SerializeField] TextMeshProUGUI CoinsText;
     [SerializeField] TextMeshProUGUI InteractText;
@@ -30,6 +31,24 @@ public class GameSession : MonoBehaviour
     {
         CoinsText.text = coins.ToString();
         InteractText.gameObject.SetActive(false);
+        currentLevelIndex = clamp(SceneManager.GetActiveScene().buildIndex, 1, 2);
+        
+    }
+
+    public int clamp(int num, int min, int max)
+    {
+        if (num < min)
+        {
+            return min;
+        }
+        else if (num > max)
+        {
+            return max;
+        }
+        else
+        {
+            return num;
+        }
     }
 
     public void PickupCoin()
@@ -52,15 +71,28 @@ public class GameSession : MonoBehaviour
         InteractText.gameObject.SetActive(false);
     }
 
+    public void Death()
+    {
+        SceneManager.LoadScene("DeathScreen");
+    }
+
     public void ResetLevel()
     {
         coins = startCoins;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        CoinsText.text = coins.ToString();
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(currentLevelIndex);
     }
 
     public void NextLevel()
     {
         startCoins = coins;
+        currentLevelIndex = clamp(currentLevelIndex + 1, 1, 2);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void WinGame()
+    {
+        SceneManager.LoadScene("EndScreen");
     }
 }

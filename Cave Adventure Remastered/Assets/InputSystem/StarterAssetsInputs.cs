@@ -13,6 +13,7 @@ namespace StarterAssets
 		public bool jump;
 		public bool sprint;
 		public bool press;
+		public bool escape;
 
 
 		[Header("Movement Settings")]
@@ -50,6 +51,11 @@ namespace StarterAssets
 		{
 			PressInput(value.isPressed);
 		}
+
+		public void OnEscape(InputValue value)
+		{
+			EscapeInput(value.isPressed);
+		}
 #endif
 
 
@@ -76,6 +82,11 @@ namespace StarterAssets
 		public void PressInput(bool newPressState)
 		{
 			press = newPressState;
+		}
+
+		public void EscapeInput(bool newEscapeState)
+		{
+			escape = newEscapeState;
 		}
 
 		private void OnApplicationFocus(bool hasFocus)

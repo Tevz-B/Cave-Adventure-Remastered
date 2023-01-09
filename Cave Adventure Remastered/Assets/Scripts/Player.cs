@@ -2,6 +2,8 @@
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 using UnityEngine.InputSystem;
 #endif
+using UnityEngine.SceneManagement;
+
 
 namespace StarterAssets
 {
@@ -130,6 +132,7 @@ namespace StarterAssets
 			GroundedCheck();
 			Move();
 			PlaySounds();
+			Exit();
 		}
 
 		private void LateUpdate()
@@ -158,7 +161,16 @@ namespace StarterAssets
 			//Debug.Log(_groundedPrev);
 		}
 
-		private void GroundedCheck()
+        private void Exit()
+        {
+			if (_input.escape)
+            {
+				SceneManager.LoadScene(0); // go to main menu
+			}
+        }
+        
+
+        private void GroundedCheck()
 		{
 			// set sphere position, with offset
 			Vector3 spherePosition = new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z);
